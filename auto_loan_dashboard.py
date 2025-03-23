@@ -20,8 +20,8 @@ def fetch_fred_data(series_id, api_key):
         return pd.DataFrame()
 
 api_key = st.secrets["FRED_API_KEY"]
-subprime_delinquency_id = "DTSUBLPD"
-manheim_index_id = "MANUVPI"
+subprime_delinquency_id = "DRCLACBS"
+manheim_index_id = "CUSR0000SETA02"
 
 delinquency_df = fetch_fred_data(subprime_delinquency_id, api_key)
 manheim_df = fetch_fred_data(manheim_index_id, api_key)
